@@ -1,0 +1,39 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.apiKey {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.apiKey label {
+  margin-right: 0.5rem;
+}
+
+.apiKey input[type='password'] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.footerText {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Grader Aide",
+  "version": "0.0.1",
+  "description": "Code Fellows grading assistant, powered by AI",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run prep",
+    "prep": "npm run exp && node publish-extension.js",
+    "exp": "next build",
+    "run": "next start",
+    "dev": "next dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Copyright (C) Code Fellows, all rights reserved",
+  "dependencies": {
+    "glob": "^10.2.3",
+    "next": "^13.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

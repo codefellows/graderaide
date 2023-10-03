@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Grader Aide",
+  "short_name": "Grader Aide",
+  "version": "0.0.1",
+  "description": "Code Fellows grading assistant, powered by AI",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "192": "/icons/icon192.png"
+  },
+  "permissions": [
+    "sidePanel",
+    "activeTab",
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.github.com/*"
+      ],
+      "js": [
+        "page-reader.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://*.github.com/*"
+    ]
+  },
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+  "action": {
+    "default_title": "Click to open Grader Aide"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+G",
+        "mac": "Command+G"
+      }
+    }
+  }
+}
