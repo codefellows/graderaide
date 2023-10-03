@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  height: 90vh; /* Added to ensure the container takes up the full height of the viewport */
+  background: linear-gradient(153deg, rgb(116, 56, 216), rgb(18, 150, 170) 74%);
+  padding: 5px;
+  color: white;
+  display: flex; /* Added to enable flexbox */
+  flex-direction: column; /* Added to stack children vertically */
+}
+
+.main {
+  width: 100%;
+  flex-grow: 1; /* Added to make the main content area grow to take up available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main iframe {
+  width: 100%; /* Ensure iframe takes the full width */
+  flex-grow: 1; /* Make iframe grow to take up available space */
+  border: none; /* Optional: remove the border */
+}
+
+.iframeContainer {
+  background-color: #fafafa; /* Set the background color */
+  flex-grow: 1; /* Make the container grow to take up available space */
+  width: 100%; /* Ensure it takes the full width */
+  display: flex; /* Enable flexbox to center the iframe */
+  justify-content: center; /* Center the iframe horizontally */
+  align-items: center; /* Center the iframe vertically */
+}
+
+.title {
+  font-size: x-large;
+}
+
+.description {
+  background: #fafafa;
+  color: darkslategrey;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: auto;
+  padding: 1rem;
+  font-size: medium;
+}
+
+.code {
+  background: #fafafa;
+  color: grey;
+  border-radius: 5px;
+  padding: 20px;
+  font: small Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin: auto;
+  background: conic-gradient(red, yellow, green, blue, purple, red);
+  mask: radial-gradient(circle, black, transparent);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
