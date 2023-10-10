@@ -9,7 +9,8 @@ export default function App({ Component, pageProps }) {
     program: '',
     courseLevel: '',
     assignmentType: '',
-    classNumber: ''
+    classNumber: '',
+    multi: ''
   });
 
   const navigateToPage = (page) => {

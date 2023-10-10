@@ -4,12 +4,18 @@ import Grading from '../components/Grading';
 import Solution from '../components/Solution';
 
 export default function Home({ activePage, selections }) {
-  
+
   return (
     <>
-      {activePage === 'assignment' && <Assignment selections={selections} />}
-      {activePage === 'solution' && <Solution  selections={selections}/>}
-      {activePage === 'grading' && <Grading  selections={selections} />}
+      <div style={{ display: activePage === 'assignment' ? 'block' : 'none' }}>
+        <Assignment selections={selections} />
+      </div>
+      <div style={{ display: activePage === 'solution' ? 'block' : 'none' }}>
+        <Solution selections={selections} />
+      </div>
+      <div style={{ display: activePage === 'grading' ? 'block' : 'none' }}>
+        <Grading selections={selections} />
+      </div>
     </>
   );
 }

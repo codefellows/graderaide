@@ -5,7 +5,7 @@ export default function Assignment({ selections }) {
   const domain = 'https://codefellows.github.io/';
   const repo = `${selections.program}-${selections.courseLevel}-guide/`;
   const path = `curriculum/class-${selections.classNumber}/`;
-  const file = `${selections.assignmentType}/index.html`;
+  const file = `${selections.assignmentType}${selections.multi}/index.html`;
   const url = selections.program && selections.courseLevel && selections.assignmentType && selections.classNumber
     ? `${domain}${repo}${path}${file}`
     : '';

@@ -23,6 +23,9 @@ export default function Solution({ selections }) {
     file = `${selections.assignmentType}/solutions-${selections.classNumber}.test.js`;
   }
 
+  if (selections.program === 'code' && selections.courseLevel === '201' && selections.assignmentType === 'lab') {
+    file = `${file}lab-${selections.classNumber}${selections.multi.replace('-','')}/index.html`;
+  }
 
   const url = selections.program && selections.courseLevel && selections.assignmentType && selections.classNumber
     ? `${domain}${repo}${path}${file}`
