@@ -10,7 +10,7 @@ export default function Grading({ selections }) {
     setAssignmentContent('');
     if (selections.program && selections.courseLevel && selections.assignmentType && selections.classNumber) {
       const repo = `${selections.program}-${selections.courseLevel}-guide`;
-      const path = `curriculum/class-${selections.classNumber}/${selections.assignmentType}/README.md`;
+      const path = `curriculum/class-${selections.classNumber}/${selections.assignmentType + selections.multi}/README.md`;
       const url = `https://api.github.com/repos/codefellows/${repo}/contents/${path}`;
       console.log('Fetching assignment content from:', url);
 
